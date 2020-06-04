@@ -49,18 +49,25 @@ wlan.fc.type_subtype == 4
 > **_Question :_** Quel est l’adresse MAC de la cible ?
 > 
 > **_Réponse :_** 
+Avec wireshark on obtient ceci :
 Source address: SamsungE_22:49:74 (fc:f1:36:22:49:74)
 
+L'adresse MAC de la cible est donc fc:f1:36:22:49:74.
 
 ---
 > **_Question :_** Quel est le nom du constructeur de l’interface sans fils de la cible ?
 > 
 > **_Réponse :_** 
+Le nom du constructeur de l'interface sans fils de la cible est Samsung.
 
 ---
 > **_Question :_** Quel autres endroits la cible a-t-elle probablement visités ?
 > 
 > **_Réponse :_** 
+La cible a probablement visité également:
+- L'aéroport de genève (GVA Airport)
+- La migros
+- Fleur de Pains
 
 ---
 
