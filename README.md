@@ -125,7 +125,9 @@ Quelques secondes.
 > **_Question :_** Arrivez-vous à récupérer les informations d’identification (credentials) de l’authentification basique http contenue dans la capture ?
 > 
 > **_Réponse :_** 
-
+Avec wireshark, après entrée de la clé WEP, on obtient les informations d’identification (credentials) suivants :
+Authorization: Basic YWRtaW46YWRtaW4=\r\n
+    Credentials: admin:admin
 ---
 
 
