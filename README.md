@@ -114,12 +114,13 @@ Maintenant que vous avez la clé WEP, configurez la dans Wireshark afin de déch
 > **_Question :_** Combien de temps avez-vous attendu pour obtenir la clé WEP ?
 > 
 > **_Réponse :_** 
-
+Quelques secondes.
 ---
 > **_Montrer une capture d'écran de l'obtention de la clé WEP_**
 > 
 > **_Capture ici_** 
-
+![](aircrack1.png)
+![](aircrack2.png)
 ---
 > **_Question :_** Arrivez-vous à récupérer les informations d’identification (credentials) de l’authentification basique http contenue dans la capture ?
 > 
