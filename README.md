@@ -117,10 +117,8 @@ Maintenant que vous avez la clé WEP, configurez la dans Wireshark afin de déch
 Moins d'une seconde
 ---
 > **_Montrer une capture d'écran de l'obtention de la clé WEP_**
-> 
-> **_Capture ici_** 
-![](images/aircrack1.png)
-![](images/aircrack2.png)
+> ![](images/aircrack1.png)
+> ![](images/aircrack2.png)
 ---
 > **_Question :_** Arrivez-vous à récupérer les informations d’identification (credentials) de l’authentification basique http contenue dans la capture ?
 > 
@@ -226,12 +224,20 @@ Nous avons enlevé une seule trame (choisie stratégiquement) du fichier de capt
 * Répondre aux questions suivantes :
 
 > **_Question :_** Est-ce que vous arrivez à refaire l'exercice ? Pourquoi ou pourquoi pas ?
-> 
+>
 > **_Réponse :_** 
+>
+> Impossible pour wireshark de trouver des paquets exploitables:
+>
+> ![](images/wpa2-cant.png)
 
 ---
 > **_Question :_** Sur la base de votre réponse précédente, arrivez-vous à déduire quelle trame a été effacée ?
 
-> 
 > **_Réponse :_** 
-> 
+>
+> Il manque une des trames du `4-way handshake` entre l'AP et le client. 
+>
+> Il manque la 2ème trame :
+>
+> ![](images/eapol-missing.png)
