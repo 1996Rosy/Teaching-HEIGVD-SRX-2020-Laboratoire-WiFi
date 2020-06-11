@@ -4,7 +4,7 @@ Vous aurez besoin de ``Wireshark`` et du logiciel ``aircrack-ng`` pour ce labora
 
 Si vous utilisez une distribution Kali, tout est déjà pré-installé. Pour la version Windows du logiciel ``aircrack-ng``ou pour son installation sur d'autres distributions, référez-vous au
 [site web aircrack-ng](https://aircrack-ng.org) et/ou au gestionnaire de paquets de votre distribution.
- 
+
 # Identification d'un dispositif
 
 ## Introduction
@@ -114,7 +114,7 @@ Maintenant que vous avez la clé WEP, configurez la dans Wireshark afin de déch
 > **_Question :_** Combien de temps avez-vous attendu pour obtenir la clé WEP ?
 > 
 > **_Réponse :_** 
-Quelques secondes.
+Moins d'une seconde
 ---
 > **_Montrer une capture d'écran de l'obtention de la clé WEP_**
 > 
@@ -152,8 +152,22 @@ Nous utiliserons Wireshark pour trouver l’authentification WPA contenue dans l
 * Analyser les messages du 4-way handshake. En particulier, essayer de trouver les chiffres aléatoires (Nonces) échangés entre le client et l’AP.
 
 > **_Fournir une capture d'écran des chiffres aléatoires_**
+>
+> ![](images/eapol1.png)
+>
 > 
-> **_Capture ici_** 
+>
+> ![](images/eapol2.png)
+>
+> 
+>
+> ![](images/eapol3.png)
+>
+> 
+>
+> ![](images/eapol4.png)
+>
+> 
 
 ---
 
@@ -164,7 +178,7 @@ Nous allons nous servir de l’outil aircrack-ng et d’un dictionnaire pour ret
 
 * Copier [le dictionnaire](files/french_dico.txt) sur votre machine locale 
 * Utilisez aircrack-ng en ligne de commandes pour cracker la passphrase du réseau WPA avec le même [fichier de capture chiffrée avec WPA](files/coursWLAN-WPA.cap) que vous avez déjà copié.
- 
+
 ```
 aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 ```
@@ -175,22 +189,33 @@ aircrack-ng <nom-du-fichier-capture> -w <nom-du-dictionnaire>
 
 > **_Question :_** Combien de temps avez-vous attendu pour obtenir la passphrase WPA ?
 > 
-> **_Réponse :_** 
+> **_Réponse :_** 11 secondes
 
 ---
 > **_Montrer une capture d'écran de l'obtention de la passphrase WPA_**
 > 
-> **_Capture ici_** 
+> ![](images/wpa-crack.png)
 
 ---
 > **_Question :_** Lors de la capture, la cible a fait un « ping » sur un serveur. Arrivez-vous à dire de quel serveur il s’agit ?
 
-> 
 > **_Réponse :_** 
-> 
-> Adresse IP du serveur : ?
 >
-> Nom de Domaine : ?
+> Après avoir inséré la clé:
+>
+> ![](images/wpa-pwd-wireshark.png)
+>
+> On recherche les pings dans wireshark
+>
+> ![](images/ping-wpa.png)
+>
+> On peut traduire l'adresse IP en nom de domaine:
+>
+> ![](images/host-ip.png)
+
+> Adresse IP du serveur : 31.13.64.35
+>
+> Nom de Domaine : edge-star-mini-shv-01-amt2.facebook.com.
 
 
 
